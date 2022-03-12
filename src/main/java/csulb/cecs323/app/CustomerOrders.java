@@ -86,13 +86,19 @@ public class CustomerOrders {
       List <Products> products = new ArrayList<Products>();
       // Load up my List with the Entities that I want to persist.  Note, this does not put them
       // into the database.
-      products.add(new Products("076174517163", "16 oz. hickory hammer", "Stanely Tools", "1", 9.97, 50));
+      products.add(new Products("076174517163", "16 oz. Hickory Hammer", "Stanely Tools", "00001", 9.97, 50));
       // Create the list of owners in the database.
       customerOrders.createEntity (products);
 
       // Commit the changes so that the new data persists and is visible to other users.
       tx.commit();
       LOGGER.fine("End of Transaction");
+
+      for(int i = 0; i < products.size(); i++)
+      {
+         System.out.println(products.get(i).getProd_name());
+      }
+
 
    } // End of the main method
 
