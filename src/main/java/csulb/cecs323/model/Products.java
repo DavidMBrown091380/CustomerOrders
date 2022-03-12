@@ -21,7 +21,7 @@ import javax.persistence.NamedNativeQuery;
         name="ReturnProduct",
         query = "SELECT * " +
                 "FROM   PRODUCTS " +
-                "WHERE  url = ? ",
+                "WHERE  prod_name = ? ",
         resultClass = Products.class
 )
 /** Something that we stock, that the customer can order. */

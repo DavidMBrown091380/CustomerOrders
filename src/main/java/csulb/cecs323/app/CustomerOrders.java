@@ -74,7 +74,6 @@ public class CustomerOrders {
       // Create an instance of CustomerOrders and store our new EntityManager as an instance variable.
       CustomerOrders customerOrders = new CustomerOrders(manager);
 
-
       // Any changes to the database need to be done within a transaction.
       // See: https://en.wikibooks.org/wiki/Java_Persistence/Transactions
 
@@ -86,7 +85,7 @@ public class CustomerOrders {
       List <Products> products = new ArrayList<Products>();
       // Load up my List with the Entities that I want to persist.  Note, this does not put them
       // into the database.
-      products.add(new Products("076174517163", "16 oz. hickory hammer", "Stanely Tools", "1", 9.97, 50));
+      products.add(new Products("076174517163", "16 oz. Hickory Hammer", "Stanely Tools", "00001", 9.97, 50));
       // Create the list of owners in the database.
       customerOrders.createEntity (products);
 
