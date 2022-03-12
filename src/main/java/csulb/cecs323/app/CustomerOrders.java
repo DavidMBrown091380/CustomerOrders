@@ -74,7 +74,6 @@ public class CustomerOrders {
       // Create an instance of CustomerOrders and store our new EntityManager as an instance variable.
       CustomerOrders customerOrders = new CustomerOrders(manager);
 
-
       // Any changes to the database need to be done within a transaction.
       // See: https://en.wikibooks.org/wiki/Java_Persistence/Transactions
 
@@ -93,12 +92,6 @@ public class CustomerOrders {
       // Commit the changes so that the new data persists and is visible to other users.
       tx.commit();
       LOGGER.fine("End of Transaction");
-
-      for(int i = 0; i < products.size(); i++)
-      {
-         System.out.println(products.get(i).getProd_name());
-      }
-
 
    } // End of the main method
 
